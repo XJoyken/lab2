@@ -464,3 +464,112 @@ remove()	Removes the item with the specified value
 reverse()	Reverses the order of the list
 sort()	Sorts the list
 """
+
+#Tuples.
+#A tuple is a collection which is ordered and unchangeable. Tuples are written with round brackets ().
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+#Tuple items are ordered, unchangeable, and allow duplicate values.
+#Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+print(thistuple)
+#len():
+thistuple = ("apple", "banana", "cherry")
+print(len(thistuple))
+
+#to create a tuple with one item, it should have a comma after the item
+thistuple = ("apple",) #tuple
+print(type(thistuple))
+#NOT a tuple
+thistuple = ("apple") #str
+print(type(thistuple))
+
+#Tuple items can be of any data type:
+tuple1 = ("apple", "banana", "cherry")
+tuple2 = (1, 5, 7, 9, 3)
+tuple3 = (True, False, False)\
+
+#A tuple can contain different data types:
+tuple1 = ("abc", 34, True, 40, "male")
+#type - 'tuple'
+mytuple = ("apple", "banana", "cherry")
+print(type(mytuple))
+
+#tuple():
+thistuple = tuple(("apple", "banana", "cherry")) # note the double round-brackets
+print(thistuple)
+
+#indexing is the same as in lists!!!
+
+#Change Tuple Values:
+#convert into a list method:
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+print(x) 
+#Add Items.
+#convert into a list method:
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+print(thistuple)
+#add tuple to tuple:
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
+print(thistuple)
+
+#Remove items.
+#convert into a list method:
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+#del - delete a tuple completely:
+thistuple = ("apple", "banana", "cherry")
+del thistuple
+#print(thistuple) this will raise an error because the tuple no longer exists 
+
+#Unpacking a Tuple.
+#packing a tuple:
+fruits = ("apple", "banana", "cherry")
+#But, in Python, we are also allowed to extract the values back into variables. This is called "unpacking":
+fruits = ("apple", "banana", "cherry")
+
+(green, yellow, red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+#The number of variables must match the number of values in the tuple, if not, it must use an asterisk to collect the remaining values as a list.
+
+#Asterisk*:
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+#----
+fruits = ("apple", "mango", "papaya", "pineapple", "cherry")
+
+(green, *tropic, red) = fruits
+
+print(green)
+print(tropic)
+print(red)
+
+#Loop tuples the same as in lists!!!
+
+#Join tuples the same as in lists!!!
+#Note: new — multiplication of lists/tuples etc.
+
+#Tuple methods: (only two)
+"""
+count()	Returns the number of times a specified value occurs in a tuple
+index()	Searches the tuple for a specified value and returns the position of where it was found
+"""
